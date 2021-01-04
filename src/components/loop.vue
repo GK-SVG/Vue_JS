@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mydiv">
         <table border="1px">
             <tr>
                 <td>ID</td>
@@ -28,3 +28,11 @@ export default Vue.extend({
     }
 })
 </script>
+
+<style scoped>
+ .mydiv{
+     background-color: rgb(3, 2, 22);
+     height: 100px;
+     width: 100px;
+ }
+</style>
