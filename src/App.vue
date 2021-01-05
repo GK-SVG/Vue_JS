@@ -2,7 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <DataBinding />
+    <MyProps v-bind:mydata="users"/>
     <!-- <User/> -->
   </div>
 </template>
@@ -12,14 +12,21 @@
 // import Home from './components/Home.vue';
 // import Home from "./components/template.vue";
 // import Home from "./components/style.vue";
-import DataBinding from "./components/DataBinding";
+// import DataBinding from "./components/DataBinding";
+import MyProps from "./components/props";
 export default {
   name: 'App',
   components: {
     // HelloWorld,
     // Home,
     // User,
-    DataBinding
+    // DataBinding
+    MyProps
+  },
+  data(){
+    return{
+      users:[{name:"A"},{name:"B"},{name:"H"},{name:"I"},{name:"S"}]
+    }
   }
 }
 </script>
