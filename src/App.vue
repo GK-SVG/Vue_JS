@@ -2,14 +2,15 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Home data="Tstings props in Vue" />
+    <Home />
     <!-- <User/> -->
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Home from './components/Home.vue';
+// import Home from './components/Home.vue';
+import Home from "./components/template.vue";
 export default {
   name: 'App',
   components: {
