@@ -2,7 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Home />
+    <DataBinding />
     <!-- <User/> -->
   </div>
 </template>
@@ -11,13 +11,15 @@
 // import HelloWorld from './components/HelloWorld.vue'
 // import Home from './components/Home.vue';
 // import Home from "./components/template.vue";
-import Home from "./components/style.vue";
+// import Home from "./components/style.vue";
+import DataBinding from "./components/DataBinding";
 export default {
   name: 'App',
   components: {
     // HelloWorld,
-    Home,
+    // Home,
     // User,
+    DataBinding
   }
 }
 </script>
