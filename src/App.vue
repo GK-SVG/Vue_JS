@@ -3,10 +3,11 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <MyProps v-bind:mydata="users"/> -->
-    <h1>{{title}}</h1>
+    <!-- <h1>{{title}}</h1> -->
     <!-- <DataBinding/> -->
-    <child v-on:changetitle="updateTitle($event)"/>
+    <!-- <child v-on:changetitle="updateTitle($event)"/> -->
     <!-- <User/> -->
+    <Login/>
   </div>
 </template>
 
@@ -16,11 +17,13 @@
 // import Home from "./components/template.vue";
 // import Home from "./components/style.vue";
 // import DataBinding from "./components/DataBinding";
-import child from "./components/child";
+// import child from "./components/child";
+import Login from "./components/Form";
 export default {
   name: 'App',
   components: {
-    child,
+    Login,
+    // child,
     // HelloWorld,
     // Home,
     // User,
