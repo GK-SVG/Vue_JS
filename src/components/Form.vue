@@ -1,8 +1,15 @@
 <template>
     <div>
-        <input type="text" v-model="userdata.username" placeholder="Enter UserName"><br><br>
-        <input type="password"  v-model="userdata.password" placeholder="Enter your password"><br><br>
-        <button v-on:click="uploadData" type="submit">Submit</button><br>
+        <p v-if="errors.length">
+            <b>Errors Are</b>
+            <ul >
+                <li v-for="error in errors" v-bind:key="error.id">{{error}}</li>
+            </ul>
+        </p>
+        <form @submit="uploadData">
+        <input type="text" v-model="username" placeholder="Enter UserName"><br><br>
+        <input type="password"  v-model="password" placeholder="Enter your password"><br><br>
+        <button type="submit">Submit</button><br></form>
     </div>
 </template>
 
@@ -11,16 +18,25 @@ export default {
     name:"Login",
     data(){
         return{
-            userdata:{
-                username:null,
-                password:null
-            }
+            errors:[],
+            username:null,
+            password:null 
         }
     },
     methods:{
-        uploadData(){
-            console.log('username--',this.userdata.username)
-            console.log('password--',this.userdata.password)
+        uploadData(e){
+            e.preventDefault()
+            this.errors = []
+            if(this.username !=null && this.password!=null){
+                console.log('username--',this.username)
+                console.log('password--',this.password)
+            }
+            if (!this.username){
+                this.errors.push('username never blank')
+            }
+            if (!this.password){
+                this.errors.push('password never blank')
+            }
         }
     }
 }

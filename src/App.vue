@@ -7,7 +7,8 @@
     <!-- <DataBinding/> -->
     <!-- <child v-on:changetitle="updateTitle($event)"/> -->
     <!-- <User/> -->
-    <Login/>
+    <h1>Login Here</h1>
+    <Login />
   </div>
 </template>
 
