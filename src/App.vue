@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <MyProps v-bind:mydata="users"/>
+    <!-- <MyProps v-bind:mydata="users"/> -->
+    <h1>{{title}}</h1>
+    <!-- <DataBinding/> -->
+    <child v-on:changetitle="updateTitle($event)"/>
     <!-- <User/> -->
   </div>
 </template>
@@ -13,19 +16,27 @@
 // import Home from "./components/template.vue";
 // import Home from "./components/style.vue";
 // import DataBinding from "./components/DataBinding";
-import MyProps from "./components/props";
+import child from "./components/child";
 export default {
   name: 'App',
   components: {
+    child,
     // HelloWorld,
     // Home,
     // User,
     // DataBinding
-    MyProps
+    // MyProps
+    
   },
   data(){
     return{
-      users:[{name:"A"},{name:"B"},{name:"H"},{name:"I"},{name:"S"}]
+      // users:[{name:"A"},{name:"B"},{name:"H"},{name:"I"},{name:"S"}]
+      title:"Props tutoorials"
+    }
+  },
+  methods:{
+    updateTitle(title){
+          this.title=title
     }
   }
 }
