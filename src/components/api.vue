@@ -3,17 +3,17 @@
         <h1>
             Employees List
         </h1>
-        <table border="1px">
+        <!-- <table border="1px">
         <tr>
             <td>Name</td>
             <td>Salery</td>
             <td>Age</td>
-        </tr>
-        <tr v-for="item in list" :key="item.id">
+        </tr> -->
+        <!-- <tr v-for="item in list" :key="item.id">
             <td>{{item.employee_name}}</td>
             <td>{{item.employee_salary}}</td>
             <td>{{item.employee_age}}</td>
-        </tr></table>
+        </tr></table> -->
     </div>
 </template>
 
@@ -30,10 +30,11 @@ export default {
         }
     },
     mounted(){
-        Vue.axios.get('http://dummy.restapiexample.com/api/v1/employees')
+        Vue.axios.get('http://127.0.0.1:8000/StudentAPI/')
         .then(resp=>{
-            this.list = resp.data.data
-            console.log(this.list)
+            //this.list = resp.data.data
+
+            console.log(resp)
             
         })
     }
