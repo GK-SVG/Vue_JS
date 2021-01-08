@@ -3,13 +3,14 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <MyProps v-bind:mydata="users"/> -->
-    <h1>{{title|UCASE}}</h1>
+    <!-- <h1>{{title|UCASE}}</h1> -->
     <!-- <DataBinding/> -->
     <!-- <child v-on:changetitle="updateTitle($event)"/> -->
     <!-- <User/> -->
     <!-- <h1>Login Here</h1> -->
     <!-- <Login /> -->
-    <LifeCycle/>
+    <!-- <LifeCycle/> -->
+    <EmpAPI/>
   </div>
 </template>
 
@@ -21,11 +22,13 @@
 // import DataBinding from "./components/DataBinding";
 // import child from "./components/child";
 // import Login from "./components/Form";
-import LifeCycle from "./components/lifecycle";
+// import LifeCycle from "./components/lifecycle";
+import EmpAPI from "./components/api";
 export default {
   name: 'App',
   components: {
-    LifeCycle
+    EmpAPI
+    // LifeCycle
     // Login,
     // child,
     // HelloWorld,
