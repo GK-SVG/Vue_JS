@@ -10,7 +10,8 @@
     <!-- <h1>Login Here</h1> -->
     <!-- <Login /> -->
     <!-- <LifeCycle/> -->
-    <EmpAPI/>
+    <!-- <EmpAPI/> -->
+    <PostReq/>
   </div>
 </template>
 
@@ -23,11 +24,13 @@
 // import child from "./components/child";
 // import Login from "./components/Form";
 // import LifeCycle from "./components/lifecycle";
-import EmpAPI from "./components/api";
+// import EmpAPI from "./components/api";
+import PostReq from "./components/post"
 export default {
   name: 'App',
   components: {
-    EmpAPI
+    PostReq
+    // EmpAPI
     // LifeCycle
     // Login,
     // child,
