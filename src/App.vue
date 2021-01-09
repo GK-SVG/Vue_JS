@@ -11,7 +11,8 @@
     <!-- <Login /> -->
     <!-- <LifeCycle/> -->
     <!-- <EmpAPI/> -->
-    <PostReq/>
+    <!-- <PostReq/> -->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -25,11 +26,11 @@
 // import Login from "./components/Form";
 // import LifeCycle from "./components/lifecycle";
 // import EmpAPI from "./components/api";
-import PostReq from "./components/post"
+// import PostReq from "./components/post"
 export default {
   name: 'App',
   components: {
-    PostReq
+    // PostReq
     // EmpAPI
     // LifeCycle
     // Login,
